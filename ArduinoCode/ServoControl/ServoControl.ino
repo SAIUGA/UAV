@@ -1,7 +1,6 @@
 #include <Keyboard.h>
 #include <Servo.h>
 
-
 Servo servo;
 int servoAngle;
 const int xpin = A2; //x-axis of accelerometer
@@ -36,6 +35,7 @@ void loop() {
   double pitch = ( ( (atan2(gvalZ,gvalX) * 180) / 3.14 ) + 180 ); // Formula for pitch
   double yaw = ( ( (atan2(gvalX,gvalY) * 180) / 3.14 ) + 180 ); // Formula for yaw
 
+  
   //prints analog voltage values at each pin
   Serial.println("\nAnalogX\tAnalogY\tAnalogZ");
   Serial.print(analogX);
@@ -61,6 +61,12 @@ void loop() {
   Serial.print("\t");
   Serial.println(yaw);
   Serial.println();
-  
   delay(500);
+
+  /* if ( (roll > 360) || (pitch > 360) || (yaw > 360)) {
+    Serial.println("ERROR: GREATER THAN 360!!!! NOTICE ME");
+  }
+  * test function to see if any of the angle values exceed 360.
+  */
+  
 }
