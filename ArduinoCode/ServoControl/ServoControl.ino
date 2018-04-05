@@ -18,9 +18,9 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   //Handles the servo
-    
   servoAngle = random(1, 360);
   servo.write(servoAngle);
+  Serial.print("ServoAngle: ");
   Serial.println(servoAngle);
   
   //Handles the accelerometer
@@ -35,6 +35,7 @@ void loop() {
   double yaw = ( ( (atan2(gvalX,gvalY) * 180) / 3.14 ) + 180 ); // Formula for yaw
 
   //prints analog voltage values at each pin
+  Serial.println("\nAnalogX\tAnalogY\tAnalogZ");
   Serial.print(analogX);
   Serial.print("\t");
   Serial.print(analogY);
@@ -43,20 +44,21 @@ void loop() {
   Serial.print("\n");
  
   //prints acceleration
+  Serial.println("\nAcceleration in G values -- X, Y, Z");
   Serial.print(gvalX);
   Serial.print("\t");
   Serial.print(gvalY);
   Serial.print("\t");
-  Serial.print(gvalZ);
-  Serial.print("\n");
+  Serial.println(gvalZ);
 
   //prints roll pitch and yaw angle values
+  Serial.println("\nRoll\tPitch\tYaw");
   Serial.print(roll);
   Serial.print("\t");
   Serial.print(pitch);
   Serial.print("\t");
-  Serial.print(yaw);
-  Serial.print("\n");
+  Serial.println(yaw);
+  Serial.println();
   
   delay(500);
 }
