@@ -1,0 +1,24 @@
+Goal 1 - control plane wirelessly, trnasmitter w/reciever 
+channel 1 and 6 are for the right controller, 2 and 5 are for the right controllr
+
+idea - eventually use the voice sensors to have communication through the UAV - it can work as a phone too.
+
+
+errors:
+Arduino: 1.8.5 (Mac OS X), Board: "Arduino/Genuino Mega or Mega 2560, ATmega2560 (Mega 2560)"
+
+Sketch uses 2396 bytes (0%) of program storage space. Maximum is 253952 bytes.
+Global variables use 161 bytes (1%) of dynamic memory, leaving 8031 bytes for local variables. Maximum is 8192 bytes.
+the selected serial port avrdude: stk500_send(): failed to send command to serial port
+ does not exist or your board is not connected
+avrdude: ser_open(): can't open device "/dev/cu.wchusbserial1420": No such file or directory
+ioctl("TIOCMGET"): Inappropriate ioctl for device
+ioctl("TIOCMGET"): Inappropriate ioctl for device
+avrdude: ser_send(): write error: Bad file descriptor
+avrdude: stk500_send(): failed to send command to serial port
+
+This report would have more information with
+"Show verbose output during compilation"
+option enabled in File -> Preferences.
+
+
